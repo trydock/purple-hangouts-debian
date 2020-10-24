@@ -65,5 +65,9 @@ The result can be found in ``~/rpmbuild/RPMS/`uname -m`/`` directory.
 ## Windows ##
 Use the [Windows installer](http://eion.robbmob.com/purple-hangouts.exe) to make life easier, otherwise development builds of Windows dll's live at http://eion.robbmob.com/libhangouts.dll (you'll also need libprotobuf-c-1.dll and libjson-glib-1.0.dll in your Pidgin folder, included in the installer)
 
+## Pidgin ##
+
+Watch this [video](https://www.youtube.com/watch?v=hlDhp-eNLMU)
+
 ## Like this plugin? ##
 Say "Thanks" by [sending us $1](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PZMBF2QVF69GA)
