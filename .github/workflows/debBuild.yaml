@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        run: |
+          sudo apt install -y libpurple-dev libjson-glib-dev libglib2.0-dev libprotobuf-c-dev protobuf-c-compiler mercurial make
 
       - uses: trydock/d10-pkg-builder@v1
         id: build
-        run: |
-          sudo apt install -y libpurple-dev libjson-glib-dev libglib2.0-dev libprotobuf-c-dev protobuf-c-compiler mercurial make
         with:
           args: --unsigned-source --unsigned-changes
 
