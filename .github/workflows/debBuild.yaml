@@ -18,3 +18,21 @@ jobs:
         with:
           name: ${{ steps.build.outputs.filename }}
           path: ${{ steps.build.outputs.filename }}
+
+      - uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+
+      - uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ${{ steps.build.outputs.filename }}
+          asset_name: purple-hangout-0.0.0.1.deb
+          asset_content_type: application/vnd.debian.binary-package 
