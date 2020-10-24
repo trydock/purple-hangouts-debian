@@ -12,6 +12,12 @@ Please read [the FAQ](https://github.com/EionRobb/purple-hangouts/wiki#faq) befo
 To compile, just do the standard `make && sudo make install` dance.  You'll need development packages for libpurple, libjson-glib, glib and libprotobuf-c to be able to compile.
 
 ## Debian/Ubuntu ##
+Create the debian `control` file
+
+```
+dh_make -p purple-hangouts_0.0.0.1 --single --native --copyright gpl3 --email debuggerboy@gmail.com -y
+```
+
 Run the following commands from a terminal
 
 ```
